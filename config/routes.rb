@@ -53,4 +53,9 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  get "/" => "site#home"
+  get "/about" => "site#about"
+  get "/contact" => "site#contact"
+
 end
