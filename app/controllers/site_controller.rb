@@ -9,6 +9,6 @@ class SiteController < ApplicationController
 	end
 
 	def contact
-		render "contact"  # name of view template
+		render "contact	"  # name of view template
 	end
 end
