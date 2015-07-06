@@ -58,4 +58,6 @@ Rails.application.routes.draw do
   get "/about" => "site#about"
   get "/contact" => "site#contact"
 
+  get "/projects" => "projects#index"
+
 end
