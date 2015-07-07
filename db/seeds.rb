@@ -3,32 +3,34 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: "Project 1",  { name: "Project 1",  }])
-#   Mayor.create(name: "Project 1", ity: cities.first)
+#   cities = City.create([{ name: "proj1 = Project 1",  { name: "proj1 = Project 1",  }])
+#   Mayor.create(name: "proj1 = Project 1", ity: cities.first)
+# proj1 = Project:  
+	 # t.string   "name"
+  #   t.datetime "created_at",  null: false
+  #   t.datetime "updated_at",  null: false
+  #   t.integer  "estimate"
+  #   t.text     "description"  
+# Entry: 
+	# t.integer  "project_id"
+ #    t.integer  "hours"
+ #    t.integer  "minutes"
+ #    t.text     "comment"
+ #    t.datetime "date"
+ #    t.datetime "created_at", null: false
+ #    t.datetime "updated_at", null: false
 
-Project.create(name: "Project 1", description: "This is a kick-ass bootcamp");
-Project.create(name: "Project 2", description: "This one sucks");
-Project.create(name: "Project 3", description: "flipping burgers is not for you!");
-Project.create(name: "Project 4", description: "square burgers, are you fucking kidding me?");
-Project.create(name: "Project 5", description: "This is a kick-ass bootcamp");
-Project.create(name: "Project 6", description: "This one sucks");
-Project.create(name: "Project 7", description: "flipping burgers is not for you!");
-Project.create(name: "Project 8", description: "square burgers, are you fucking kidding me?");
-Project.create(name: "Project 9", description: "This is a kick-ass bootcamp");
-Project.create(name: "Project 10", description: "This one sucks");
-Project.create(name: "Project 11", description: "flipping burgers is not for you!");
-Project.create(name: "Project 12", description: "square burgers, are you fucking kidding me?");
-Project.create(name: "Project 13", description: "This is a kick-ass bootcamp");
-Project.create(name: "Project 14", description: "This one sucks");
-Project.create(name: "Project 15", description: "flipping burgers is not for you!");
-Project.create(name: "Project 16", description: "square burgers, are you fucking kidding me?");
-Project.create(name: "Project 17", description: "This is a kick-ass bootcamp");
-Project.create(name: "Project 18", description: "This one sucks");
-Project.create(name: "Project 19", description: "flipping burgers is not for you!");
-Project.create(name: "Project 20", description: "square burgers, are you fucking kidding me?");
-Project.create(name: "Project 21", description: "This is a kick-ass bootcamp");
-Project.create(name: "Project 22", description: "This one sucks");
-Project.create(name: "Project 23", description: "flipping burgers is not for you!");
-Project.create(name: "Project 24", description: "square burgers, are you fucking kidding me?");
-Project.create(name: "Project 25", description: "square burgers, are you fucking kidding me?");
-Project.create(name: "Project no name");
+proj1 = Project.create(name: "Ironhack Bootcamp", description: "Learning web application development with Ruby on Rails", estimate: 600)
+proj2 = Project.create(name: "House Flipping Texas", description: "Buying and selling 15 homes in Texas within the next 3 months", estimate: 3000)
+proj3 = Project.create(name: "Finding Permanent Housing in Miami", description: "Making a more permanent move to Miami within the next 3 months", estimate: 60)
+proj4 = Project.create(name: "Starting my own Tech Startup", description: "Applying my skills in web application development to launch a tech startup", estimate: 5000)
+proj5 = Project.create(name: "Trip to Brazil", description: "Taking a trip to Brazil to unwind after my bootcamp", estimate: 50);
+
+
+proj1.entries.create(hours: 1, minutes: 45, date: Time.now, comment: "Practicing routes, models and views in rails")
+proj1.entries.create(hours: 2, minutes: 3, date: Time.now, comment: "Learning ruby programming language")
+proj1.entries.create(hours: 0, minutes: 45, date: Time.now, comment: "JavaScript syntax")
+proj1.entries.create(hours: 3, minutes: 45, date: Time.now, comment: "JavaScript concepts")
+
+
+

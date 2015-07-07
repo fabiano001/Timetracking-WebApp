@@ -1,5 +1,7 @@
 class Project < ActiveRecord::Base
 
+	has_many(:entries)
+
 	def self.delete_projs_over_week_old
 		old_projs = self.where("created_at<?", Date.today-7.days)
 		old_projs.destroy_all
