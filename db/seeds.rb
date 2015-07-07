@@ -31,3 +31,4 @@ Project.create(name: "Project 22", description: "This one sucks");
 Project.create(name: "Project 23", description: "flipping burgers is not for you!");
 Project.create(name: "Project 24", description: "square burgers, are you fucking kidding me?");
 Project.create(name: "Project 25", description: "square burgers, are you fucking kidding me?");
+Project.create(name: "Project no name");

@@ -1,8 +1,8 @@
 class ProjectsController < ApplicationController
 
 	def index
-		@projects = Project
-			.order(:created_at => :desc)
+		
+		@projects = Project.last_created(10);
 
 		render("index")
 	end

@@ -13,4 +13,11 @@ class Project < ActiveRecord::Base
 
 	end
 
+	def self.last_created(number)
+
+		return Project
+			.order(:created_at => :desc)
+			.limit(number)
+	end
+
 end

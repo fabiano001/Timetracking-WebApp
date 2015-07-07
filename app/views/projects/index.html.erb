@@ -4,7 +4,11 @@
 
 <ul>
 	<%@projects.each do |project|%>
-		<li><%=project.name%>: <%=project.description%></li>
+		<li><%=project.name%>
+			<%if(project.description.present?)%>
+				: <%=project.description%>
+			<%end%>
+		</li>
 	<%end%>
 </ul>
 
