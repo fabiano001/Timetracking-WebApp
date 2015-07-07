@@ -32,5 +32,10 @@ proj1.entries.create(hours: 2, minutes: 3, date: Time.now, comment: "Learning ru
 proj1.entries.create(hours: 0, minutes: 45, date: Time.now, comment: "JavaScript syntax")
 proj1.entries.create(hours: 3, minutes: 45, date: Time.now, comment: "JavaScript concepts")
 
+proj3.entries.create(hours: 0, minutes: 45, date: Time.now, comment: "Looked at apartments in mid town")
+proj3.entries.create(hours: 0, minutes: 30, date: Time.now, comment: "Looked at condos in south beach")
+proj3.entries.create(hours: 0, minutes: 35, date: Time.now, comment: "Went all the way to Hollywood to see if I like the area")
+proj3.entries.create(hours: 1, minutes: 45, date: Time.now, comment: "changed my mind about Hollywood, really want to stay in south beach or brickell")
+
 
 
