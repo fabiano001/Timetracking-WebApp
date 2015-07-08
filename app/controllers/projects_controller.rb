@@ -8,8 +8,7 @@ class ProjectsController < ApplicationController
 	end
 
 	def show
-
-
+		
 		@project =  Project.find_by(:id => params[:id])
 
 		if(@project.nil?)

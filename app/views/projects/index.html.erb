@@ -1,16 +1,30 @@
-<h1>Projects</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timetracking</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-<h2>Your projects:</h2>
+	<h1>Projects</h1>
 
-<ul>
-	<%@projects.each do |project|%>
-		<li><a href="/show/<%=project.id%>"><%=project.name%></a>
-			<%if(project.description.present?)%>
-				: <%=project.description%>
-			<%end%>
-		</li>
-	<%end%>
-</ul>
+	<h2>Your projects:</h2>
+
+	<ul>
+		<%@projects.each do |project|%>
+			<li><a href="<%=project_entries_path(project)%>"><%=project.name%></a>
+				<%if(project.description.present?)%>
+					: <%=project.description%>
+				<%end%>
+			</li>
+		<%end%>
+	</ul>
+
+</body>
+</html>
+
 
 
 
