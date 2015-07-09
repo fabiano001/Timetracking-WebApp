@@ -2,13 +2,37 @@
 <html>
 <head>
   <title>Timetracking</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class="container">
+	
+		<header class="row head-row">
+			<div class="app-name">Time tracker Web App</div>
+			<div class="header-links">
+				<a href="#">Settings</a> |
+				<a href="#">Account</a>  | 
+				<a href="#">Help</a> | 
+				<a href="#">Logout</a>
+			</div>
+		</header>
+		<div class"row tabs-row">
+			<ul class="nav nav-pills">
+				<li class="active"><a href="/projects">Projects</a></li>
+				<li><a href="#">Add New Project</a></li>
+			</ul>
+		</div>
+		<div class="row main-display">
+			<%= yield %>
+		</div>
+</div>
+
+
 
 </body>
 </html>

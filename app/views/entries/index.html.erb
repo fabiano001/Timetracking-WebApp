@@ -2,7 +2,12 @@
 
 <ul>
 	<%@entries_this_month.each do |entry|%>
-		<li><%=entry.comment%> (<%=entry.hours%> hours, <%=entry.minutes%> minutes on <%=entry.date%>) <a href="<%=edit_project_entry_path(@project, entry)%>">Edit</a></li>
+		<li><%=entry.comment%> (<%=entry.hours%> hours, <%=entry.minutes%> minutes on <%=entry.date%>)
+			<a href="<%=edit_project_entry_path(@project, entry)%>">Edit</a>
+			<a href="<%=project_entry_path(@project, entry)%>" 
+			data-method="delete"
+			data-confirm="Are you sure?">Delete</a>
+		</li>
 	<%end%>
 </ul>
 

@@ -2,5 +2,70 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-	background-color: lightyellow;
+	background-color: #DDDDCC;
+}
+
+// .container {
+// 	position: relative;
+// }
+
+.container {
+	width: 800px;
+	position: absolute;
+	
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-radius: 5px;
+	padding: 10px 30px;
+}
+
+.head-row {
+	height: 40px;
+	background-color: #006699;
+	border-radius: 5px;
+	margin-bottom: 40px;
+}
+
+.app-name {
+	font-family: verdana;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 10px;
+	padding-top: 12px;
+	color: #FFFFFF;
+	float: left;
+}
+
+.header-links {
+  font-size: 12px;
+  text-decoration: none;
+  float: right;
+  margin: 0px;
+  margin-left: -1px;
+  padding-right: 4px;
+  padding-left: 4px;
+  padding-top: 12px;
+}
+
+.header-links a {
+	color: #FFFFFF;
+}
+
+.main-display {
+	background-color: #DDDDCC;
+	border-radius: 5px;
+	margin-top: 0px;
+}
+
+.tabs-row {
+	padding-top: 40px;
+	border-radius: 5px;
+}
+
+.proj-name {
+	color: #006699;
+	font-weight: bold;
+	font-size: 12px;
+	font-family: verdana;
 }
