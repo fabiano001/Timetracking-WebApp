@@ -19,8 +19,10 @@ class EntriesController < ApplicationController
 		@entry = @project.entries.new(entry_params)
 
 		if(@entry.save)
+			flash[:notice] = "Created new entry succesfully"
 			redirect_to(project_entries_path)
 		else
+			flash[:alert] = "Please address the following errors"
 			@errors = @entry.errors.full_messages
 			render("new")
 		end
@@ -40,8 +42,10 @@ class EntriesController < ApplicationController
 		# if input is valid, update and redirect to list of entries for project
 		# otherwise show errors to user and show form again
 		if(@entry.update_attributes(entry_params))
+			flash[:notice] = "Updated entry succesfully"
 			redirect_to(project_entries_path)
 		else
+			flash[:alert] = "Please address the following errors"
 			@errors = @entry.errors.full_messages
 			render("edit")
 		end

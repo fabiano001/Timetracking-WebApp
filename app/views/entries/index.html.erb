@@ -1,5 +1,7 @@
 <h1>Entries for <%=@project.name%> for the current month</h1>
 
+<%= flash_message %>
+
 <ul>
 	<%@entries_this_month.each do |entry|%>
 		<li><%=entry.comment%> (<%=entry.hours%> hours, <%=entry.minutes%> minutes on <%=entry.date%>)

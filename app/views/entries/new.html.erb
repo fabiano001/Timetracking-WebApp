@@ -1,34 +1,3 @@
 <h1>New Entry for <%=@project.name%></h1>
 
-<% if(@errors!=nil) %>
-	<ul>
-		<% @errors.each do |err| %>
-			<li><%= err %></li>
-		<% end %>
-	</ul>
-<% end %>
-
-<%= form_for ([@project, @entry]) do |frm|%>
-
-	<div class="form-group">
-		<%= frm.label(:Comment) %>
-		<%= frm.text_field(:comment, :class => "form_control") %>
-	</div>
-
-	<div class="form-group">
-		<%= frm.label(:hours) %>
-		<%= frm.text_field(:hours, :class => "form_control") %>
-	</div>
-
-	<div class="form-group">
-		<%= frm.label(:minutes) %>
-		<%= frm.text_field(:minutes, :class => "form_control") %>
-	</div>
-
-	<div class="form-group">
-		<%= frm.label(:date) %>
-		<%= frm.date_field(:date, :class => "form_control") %>
-	</div>
-
-	<button type="submit">CREATE NEW ENTRY</button>
-<%end%>
+<%= render("form") %>

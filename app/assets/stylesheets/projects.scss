@@ -69,3 +69,26 @@ body {
 	font-size: 12px;
 	font-family: verdana;
 }
+
+.alert {
+	background-color: red;
+	color: white;
+	height: 0px;
+	width: 300px;
+	padding-top: 0px;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+
+.notice {
+	background-color: green;
+	color: white;
+	height: 0px;
+	width: 300px;
+	padding-top: 0px;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+
